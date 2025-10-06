@@ -11,6 +11,7 @@ index:
   - what-happens-at-retro-meetings
   - what-happens-at-a-sprint-planning-meeting
   - methodology-daily-scrums
+  - bread-daily-scrums
   - the-3-commitments-in-scrum
   - do-you-know-the-how-to-be-a-good-product-owner
   - work-in-priority-order
@@ -47,7 +48,7 @@ index:
   - do-you-always-know-what-are-you-working-on
   - product-owners-do-you-know-the-consequence-of-disrupting-a-team
   - send-done-videos
-  - record-a-quick-and-dirty-done-video
+  - done-video
   - when-you-use-mentions-in-a-pbi
   - discuss-the-backlog
   - which-emojis-to-use-in-scrum
@@ -69,6 +70,7 @@ index:
   - backlog-refinement-meeting
   - acceptance-criteria
   - do-you-assign-severity-levels
+  - uat-in-sprint
 ---
 
 Ready to revolutionize your project management? Check [SSW's Scrum and Agile Methodologies consulting page](https://www.ssw.com.au/consulting/scrum).

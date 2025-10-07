@@ -24,66 +24,63 @@ The companies that succeed globally ([Spotify](https://www.nimdzi.com/lessons-in
 
 ![Figure: Mismatch between number of native speakers and supported website languages. Many top-spoken languages remain underrepresented online](first_language_vs_web.png)
 
+::: china
+Chinese has the largest number of native speakers and represents a huge market opportunity. Check out our rules - [Do you know why you should Chinafy your app?](https://www.ssw.com.au/rules/do-you-know-why-you-should-chinafy-your-app/)
+:::
+
 ## The expensive confusion: i18n vs l10n
 
 ### **Internationalization** (i18n) - The architecture
 
-Count the letters between 'i' and 'n' in "internationalization", 18. Hence i18n. The W3C Internationalization Activity defines it as designing products and services so they can easily adapt to specific local languages and cultures.
+The word “internationalization” is long, so we shorten it to **i18n** because there are 18 letters between the “i” and “n.”  
+According to the W3C, internationalization means **designing your product so it can easily adapt to different languages and cultures** before you start translating.  
 
-Think of it like building a house with modular plumbing that could handle any water system globally. You're not installing fixtures yet, just ensuring your foundation won't collapse when someone needs a bidet instead of a toilet.
+Think of it like **building a website with a flexible backend**.  
+You set up your framework so it supports multiple languages: text is not hardcoded, date and currency formats can be customized, and layouts can adjust for right-to-left text.  
+You are not adding translations yet. You are just making sure the system can handle them later without breaking.  
 
 ### **Localization** (l10n) - The Implementation
 
-If i18n is the blueprint, l10n is choosing the actual fixtures, paint colors, and doorbell tunes for each market. It's where you discover whether your foundation holds.
+If i18n is the framework, **l10n** is when you actually **fill in the details for each locale**.  
+This is where you add translations, apply regional settings, and adjust visuals such as date formats, currencies, or culturally specific images.  
 
-## Common i18n issues
+This step is where you confirm that your internationalized website truly works for users in Japan, Germany, or Brazil, and fix anything that does not fit.
+
+## Common i18n issues and tips
 
 Here are the most frequent pitfalls developers encounter when scaling globally:
 
-* **Character encoding**: “Björk” becomes “Bj?rk” or 田中さん turns into “???”
-* **Dates & numbers**: “03/04/2025” means March 4 in the US, April 3 in Europe, or something else in Japan. Decimal points and commas vary by region and can cost money  
-* **Text expansion & contraction**: German words can be 30–40% longer, while Chinese can compress paragraphs into a handful of characters
-* **RTL layouts**: Arabic and Hebrew flip entire UI structures, not just text direction
-* **Names & forms**: Some cultures have one name, some have none that fit “first/last”
-* **Infrastructure blind spots**: Fonts too large, networks too slow, CDNs not present where your customers are
-* **Cultural symbols**: White means purity in the West, but death in China. Even colors can alienate users  
-
-**Note:** RTL stands for "Right-To-Left"
-
-![Figure: Arabic is one of the top 5 internet languages with 300M+ speakers. Supporting RTL layouts is essential, the UI looks entirely different when switching to Arabic](RTL_mobile.jpg)
-
-## General tips
-
-* **Use Unicode everywhere**  
-  ❌ No assumptions about ASCII-only inputs  \
-  ✅ UTF-8 end-to-end (DB, API, frontend)  
-
-* **Localize time & numbers properly**  
-  ❌ Don’t parse strings manually  \
+1. **UX - No language options**: Users are stuck with 1 language  
+  ✅ Provide a language selector (see rule [Do you always give the user an option to change the locale?](https://www.ssw.com.au/rules/do-you-always-give-the-user-an-option-to-change-the-locale/))
+2. **Character encoding**: All countries using non-latin scripts (japanese, chinese, korean, etc.)  
+  “Björk” becomes “Bj?rk” in sweden  
+  or 田中さん turns into “???” in japanese  
+  ❌ No assumptions about ASCII-only inputs  
+  ✅ UTF-8 end-to-end (DB, API, frontend)
+3. **Dates & numbers**: “03/04/2025” means March 4 in the US, April 3 in Europe, or something else in Japan. Decimal points and commas vary by region and can cost money
+  ❌ Don’t parse strings manually  
   ✅ Use `Intl.DateTimeFormat`, `Intl.NumberFormat` or libraries like [date-fns](https://date-fns.org/)  
-
-* **Design elastic UIs**  
-  ❌ Don’t hardcode pixel widths for buttons or labels\
-  ✅ Use flex layouts, `min-width`, `word-break`
-
-* **Plan for RTL**  
-  💡 Arabic accounts for 5% of internet users (300M+). Supporting RTL means mirroring the entire UI, not just text.  
-  ✅ Test with `direction: rtl;` CSS  \
-  ✅ Use logical CSS properties (`inline-start`/`inline-end`) instead of `left`/`right`  
-
-* **Simplify forms**  
+4. **UX - Text expansion & contraction**: German words can be 30–40% longer, while Chinese can compress paragraphs into a handful of characters  
+  ❌ Don’t hardcode pixel widths for buttons or labels  
+  ✅ Use flex layouts, `min-width`, `word-break`  
+5. **Names & forms**: Some cultures have one name, some have none that fit “first/last”(i.e. Indonesia, Tibet)  
   ❌ Never force “First Name / Last Name” globally  
   ✅ Use a single “Full Name” field, or make name parts optional  
-
-* **Optimize performance globally**  
+6. **Infrastructure blind spots**: Networks too slow, CDNs not present where your customers are  
   ❌ Don’t ship a 5MB JS bundle to mobile-first markets  
   ✅ Use a CDN close to your users  
   ✅ In China, use local CDNs to avoid latency from the Great Firewall  
-  ✅ Subset fonts or use system fonts  
-
-* **Check cultural assumptions**  
+  ✅ Subset fonts or use system fonts
+7. **RTL layouts**: For instance, Arabic language flip entire UI structures, not just text direction (see image below)  
+   Note: RTL stands for "Right-To-Left"  
+  💡 Arabic accounts for 5% of internet users (300M+). Supporting RTL means mirroring the entire UI, not just text.  
+  ✅ Test with `direction: rtl;`  
+  ✅ Use a combination of  logical CSS properties (`direction: rtl;`) instead of `left`/`right`  
+8. **Cultural symbols**: White means purity in the West, but death in China. Even colors can alienate users  
   ❌ Don’t assume Western metaphors apply everywhere  
   ✅ Test color/icon choices with local users (white = death in China)  
+
+![Figure: Arabic is one of the top 5 internet languages with 300M+ speakers. Supporting RTL layouts is essential, the UI looks entirely different when switching to Arabic](RTL_mobile.jpg)
 
 ::: greybox  
 Check out our rules [Use a CDN for Internationalization](/use-a-cdn/)
@@ -91,7 +88,7 @@ Check out our rules [Use a CDN for Internationalization](/use-a-cdn/)
 
 ## Traditional i18n approach
 
-### Rely on Google Translate (0 effort)
+### Option A - Rely on Google Translate (0 effort)
 
 Users can rely on Google Translate in their browser if implementation time is lacking.
 
@@ -106,7 +103,7 @@ Users can rely on Google Translate in their browser if implementation time is la
 * Inaccurate translations and broken UI elements  
 * Potential loss of international users  
 
-### Implement i18n libraries
+### Option B - Implement i18n libraries
 
 Use standard i18n tools (see below) with an internal translation workflow.  
 

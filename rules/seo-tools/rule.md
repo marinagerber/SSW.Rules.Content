@@ -11,7 +11,7 @@ authors:
 created: 2024-07-09T20:21:50.796Z
 guid: 09bd4539-6c37-4233-81dd-e9f0392e2c37
 related:
-  - google-search-console-vs-google-analytics
+  - use-google-analytics
   - wcag-compliance
 ---
 
@@ -54,10 +54,28 @@ A comprehensive SEO and SEM tool that offers in-depth keyword research, competit
   * Competitive analysis - See how your site compares to competitors
   * Keyword magic tool - Learn what your customers are searching for
   * Broken links - Find them on all your pages
-* Also helps you with social media, content marketing, and PPC.
+* Also helps you with social media, content marketing, and PPC
 
 `youtube: https://www.youtube.com/watch?v=2siEHo-ydr8`
 **Video: SEMRush Explained (What Is SEMRush And What Does It Do?) (5 min)**
+
+## Plausible Analytics
+
+Plausible Analytics is a lightweight, privacy-friendly alternative to Google Analytics.  
+
+🔗 [plausible.io](https://plausible.io)
+
+It helps you measure website traffic without using cookies or collecting personal data, making it compliant with GDPR, CCPA, and other privacy laws. 
+
+* 💸 Paid tool - [plausible.io/#pricing](https://plausible.io/#pricing)
+* Simple, easy-to-understand dashboard — no clutter or complex reports  
+* Privacy-focused — no personal data collection or tracking cookies  
+* Fast and lightweight — adds less than 1KB to your site  
+* Easy integration with most CMSs and frameworks (including static sites)
+
+::: info
+**Note:** Best for small to medium websites that value simplicity, speed, and privacy while still tracking essential visitor data.
+:::
 
 ## Ahrefs
 

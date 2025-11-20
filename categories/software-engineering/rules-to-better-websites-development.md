@@ -8,6 +8,7 @@ index:
   - the-steps-to-do-after-adding-a-page
   - create-friendly-short-urls
   - structured-website
+  - sitemap-xml-best-practices
   - always-have-a-default-index-page
   - have-a-stylesheet-file
   - scoped-css
@@ -16,7 +17,7 @@ index:
   - use-heading-tags-h1-h2-h3
   - heading-to-anchor-targets
   - design-to-improve-your-google-ranking
-  - do-you-include-google-analytics-in-your-website
+  - use-google-analytics
   - make-your-site-easy-to-maintain
   - streamline-development-with-npm-and-task-runners
   - 404-useful-error-page

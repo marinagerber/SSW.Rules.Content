@@ -31,7 +31,7 @@ Think about this, is that 10th of May or 5th of October? Is it 6 AM or 6 PM?
 People in different regions format the date in different ways:
 
 ::: img-medium  
-![Figure: 10/05/25 reads differently to Aussie, American and Chinese](image-use-correct-time-format-1.png)
+![Figure: 10/05/25 reads differently to Aussie, American and Chinese](/image-use-correct-time-format-1.png)
 :::
 
 Software can also misinterpret it. For example, entering 10/05/2025 on an Aussie laptop could be read as October 5th, 2025, if opened on an American system.

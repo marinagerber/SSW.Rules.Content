@@ -12,7 +12,7 @@ created: 2025-06-23T12:55:00.000Z
 guid: 22b8eb69-c8d6-4dbf-9ac8-41959ef1f273
 ---
 
-Hamburger menus are everywhere—those three stacked lines that hide site or app navigation. They became popular for decluttering mobile UIs, but they come at a cost: reduced discoverability, slower navigation, and lower engagement.
+Hamburger menus are everywhere. They are popular and they declutter mobile UIs but the downside is that the menu items are less discoverable and require an extra click.
 
 <!--endintro-->
 
@@ -21,43 +21,29 @@ Hamburger menus are everywhere—those three stacked lines that hide site or app
 
 ## When should you use a hamburger menu?
 
-Use it **only when screen space is tight**—typically on mobile. Otherwise, always prefer showing navigation visibly.
+Use it **only when screen space is tight** (typically on mobile). Otherwise, always prefer showing navigation visibly.
 
-::: greybox
-A desktop web app with ample space hides primary navigation behind a hamburger menu.
-:::
 ::: bad
 ![Figure: Bad example – On desktop, navigation should be visible when screen space allows. Hiding it behind a hamburger reduces usability](hamburger-menu-bad-example.png)
 :::
 
-::: greybox
-A mobile app uses a hamburger menu to preserve space while offering a clean, focused UI.
-:::
 ::: good img-medium
 ![Figure: Good example – On mobile, screen space is limited, so hiding the nav behind a hamburger is appropriate](hamburger-menu-good-example.png)
 :::
 
-## Where should you place it?
-
-| Device/Platform      | Preferred Placement | Why                                                                 |
-|----------------------|---------------------|----------------------------------------------------------------------|
-| **Android apps**     | Top left            | Matches Material Design and Android conventions                     |
-| **iOS apps**         | Top right           | Aligns with iOS patterns; better for right-thumb reach              |
-| **Mobile websites**  | Top left            | Consistent with web standards; easier for navigation + back button  |
-| **Desktop websites** | Top left (if used)  | Only use if screen space is constrained (e.g. dashboards)           |
-
-### ❌ Common mistakes to avoid
-
-* **Using a top-right hamburger on desktop** – This breaks user expectations. On desktop, primary navigation belongs on the left or fully visible
-* **Combining a hamburger menu with bottom navigation** – Choose one. Using both creates confusion and redundancy
-* **Hiding essential links** – Important actions should be visible. Hiding them behind a menu lowers engagement and completion rates
-
 ### ✅ Best practices
 
-* Use the **standard 3-line icon** – don't reinvent it
-* Include **clear animation or toggle state**
-* Make sure it's **easy to reach** on mobile—don’t place in hard-to-tap corners
-* If you only have a logo + menu, favor **left placement** for balance and ergonomics
-* Test with users to confirm comprehension and usability
+Users expect consistency in navigation — so make sure your hamburger menu behaves the way they expect.  
 
-Use the hamburger menu only when needed, place it where users expect it, and never use it as an excuse to hide important navigation. Always test your decisions—navigation is too important to guess.
+* **Placement:** The best location depends on your site’s purpose:  
+  * For **utility** or **web app pages**, keep the hamburger menu in the **top-left corner** - this follows common patterns (see Microsoft example below) 
+  * For **marketing** or **brand-focused pages**, prioritize logo visibility - in this case, place the hamburger menu on the **top-right** to give prominence to your logo
+* **Icon design:** Use the **standard three-line icon** - don't reinvent it
+* **Toggle behavior:** When opened, the hamburger icon should **transform into a cross (X)** to indicate it can be closed
+* **Branding:** If your layout includes only a logo and menu, **favor left alignment** for improved visibility and brand recognition
+
+::: good img-medium  
+![Figure: Good example – Microsoft keeps its hamburger menu in the top-left corner, following established UX patterns for consistency and familiarity](microsoft-menu.png)  
+:::
+
+Hamburger menus rock! Especially on mobile.
